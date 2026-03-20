@@ -317,3 +317,13 @@ footer {
     width: 100%;
     border-radius: 10px;
 }
+
+@media(max-width: 768px) {
+
+    .btn-gold {
+        width: 100%;          /* prend toute la largeur */
+        text-align: center;
+        display: block;
+    }
+
+}
