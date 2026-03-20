@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    background: url('imagesbackground.png') no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: black;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* option premium */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('https://via.placeholder.com/1200') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: gold;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    cursor: pointer;
+}
+
+/* SEARCH */
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.search input, .search select, .search button {
+    padding: 10px;
+}
+
+/* PROPERTIES */
+.properties {
+    padding: 40px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+}
+
+/* CONTACT */
+.contact {
+    padding: 40px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+}
+
+.contact button {
+    background: gold;
+    border: none;
+    padding: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 768px) {
+    .logo img {
+        height: 40px;
+    }
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* Overlay luxe */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* Texte */
+.card-content h3 {
+    color: gold;
+}
+
+.card-content p {
+    color: white;
+}
+
+/* Effet hover premium */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/background.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay sombre */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+}
+
+/* Contenu */
+.hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 700px;
+}
+
+/* Titre */
+.hero-content h1 {
+    font-size: 48px;
+    color: gold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Texte */
+.hero-content p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* Boutons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Bouton gold */
+.btn-gold {
+    padding: 12px 25px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: #d4af37;
+}
+
+/* Bouton outline */
+.btn-outline {
+    padding: 12px 25px;
+    border: 1px solid gold;
+    color: gold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: gold;
+    color: black;
+}
+
+/* SECTION ABOUT */
+.about {
+    padding: 60px 40px;
+    background: #111;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Texte */
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: gold;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Image */
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
