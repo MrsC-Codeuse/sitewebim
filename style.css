@@ -327,3 +327,52 @@ footer {
     }
 
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('imagesbackground.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding-top: 90px; /* important */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+
+    nav ul {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: black;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
