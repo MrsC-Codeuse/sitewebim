@@ -3,142 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immoplus - Immobilier de Prestige</title>
+    <title>Immoplus — Immobilier de Prestige au Sénégal</title>
+    <meta name="description" content="Immoplus - Agence immobilière haut de gamme au Sénégal. Appartements à Dakar, villas, hôtels et résidences à Saly Portudal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">
-    <img src="logoo.png" alt="Immoplus Logo">
-</div>
-    <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Biens</a></li>
-            <li><a href="#">Saly</a></li>
-            <li><a href="#">Dakar</a></li>
-            <li><a href="#">Contact</a></li>
-            
-        </ul>
-    </nav>
-    <div class="menu-toggle">☰</div>
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+    <div class="header-container">
+        <a href="#accueil" class="logo">
+            <img src="logoo.png" alt="Immoplus Logo">
+        </a>
+
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li><a href="#accueil"  class="nav-link">Accueil</a></li>
+                <li><a href="#biens"    class="nav-link">Nos Biens</a></li>
+                <li><a href="#about"    class="nav-link">À Propos</a></li>
+                <li><a href="#reservation" class="nav-link">Réservation</a></li>
+                <li><a href="#contact"  class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://wa.me/221XXXXXXXXX" class="btn-whatsapp-header" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="overlay"></div>
+<!-- ===== HERO ===== -->
+<section class="hero" id="accueil">
+    <!-- Slider -->
+    <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active" style="background-image:url('imagesbackground.png')"></div>
+        <div class="hero-slide"        style="background-image:url('villa.png')"></div>
+        <div class="hero-slide"        style="background-image:url('appart.png')"></div>
+    </div>
+    <div class="hero-overlay"></div>
 
     <div class="hero-content">
-        <h1>Vivez l’Excellence Immobilière</h1>
-        <p>Des biens d’exception à Dakar et Saly Portudal</p>
+        <span class="hero-badge">Immobilier de Prestige — Sénégal</span>
+        <h1 class="hero-title">
+            Vivez l'Excellence<br>
+            <span class="text-gold">au Sénégal</span>
+        </h1>
+        <p class="hero-subtitle">
+            Appartements à Dakar · Villas, Hôtels &amp; Résidences à Saly Portudal
+        </p>
+        <div class="hero-actions">
+            <a href="#biens"   class="btn-primary">Découvrir nos biens</a>
+            <a href="#contact" class="btn-outline-white">Nous contacter</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><span class="stat-num">50+</span><span class="stat-lbl">Biens disponibles</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">2</span><span class="stat-lbl">Villes couvertes</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">Satisfaction client</span></div>
+        </div>
+    </div>
 
-        <div class="hero-buttons">
-            <a href="#" class="btn-gold">Découvrir nos biens</a>
-            <a href="#" class="btn-outline">Contactez-nous</a>
+    <div class="slider-dots" id="sliderDots">
+        <button class="dot active" data-idx="0" aria-label="Slide 1"></button>
+        <button class="dot"        data-idx="1" aria-label="Slide 2"></button>
+        <button class="dot"        data-idx="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="hero-scroll-hint">
+        <span>Découvrir</span>
+        <div class="scroll-bar"></div>
+    </div>
+</section>
+
+<!-- ===== BARRE DE RECHERCHE ===== -->
+<section class="search-bar-section">
+    <div class="search-bar-wrap">
+        <div class="search-field">
+            <label for="f-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Localisation
+            </label>
+            <select id="f-location">
+                <option value="all">Toutes les villes</option>
+                <option value="dakar">Dakar</option>
+                <option value="saly">Saly Portudal</option>
+            </select>
+        </div>
+        <div class="search-divider"></div>
+        <div class="search-field">
+            <label for="f-type">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Type de bien
+            </label>
+            <select id="f-type">
+                <option value="all">Tous les types</option>
+                <option value="appartement">Appartement</option>
+                <option value="villa">Villa</option>
+                <option value="hotel">Hôtel</option>
+                <option value="residence">Résidence</option>
+            </select>
+        </div>
+        <button class="btn-search" id="btnSearch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Rechercher
+        </button>
+    </div>
+</section>
+
+<!-- ===== NOS BIENS ===== -->
+<section class="properties-section" id="biens">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Nos Propriétés</span>
+            <h2>Biens d'Exception</h2>
+            <p>Une sélection exclusive de biens immobiliers haut de gamme au Sénégal</p>
+        </div>
+
+        <!-- Filtres par onglets -->
+        <div class="filter-tabs reveal">
+            <button class="tab active" data-filter="all">Tous</button>
+            <button class="tab" data-filter="dakar">Dakar</button>
+            <button class="tab" data-filter="saly">Saly</button>
+            <button class="tab" data-filter="appartement">Appartements</button>
+            <button class="tab" data-filter="villa">Villas</button>
+            <button class="tab" data-filter="hotel">Hôtels</button>
+            <button class="tab" data-filter="residence">Résidences</button>
+        </div>
+
+        <div class="cards-grid" id="cardsGrid">
+
+            <!-- Appartement Dakar -->
+            <article class="property-card reveal" data-location="dakar" data-type="appartement">
+                <div class="card-img">
+                    <img src="appart.png" alt="Appartement de luxe à Dakar" loading="lazy">
+                    <span class="card-badge available">Disponible</span>
+                    <div class="card-img-overlay">
+                        <button class="btn-details" data-id="1">Voir les détails</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-loc">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Dakar, Plateau
+                    </p>
+                    <h3>Appartement Luxe</h3>
+                    <p class="card-desc">Magnifique appartement moderne avec vue sur mer, entièrement meublé et équipé haut de gamme.</p>
+                    <div class="card-features">
+                        <span>🛏 3 ch.</span>
+                        <span>🚿 2 sdb</span>
+                        <span>📐 120 m²</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">
+                            <span class="price">250 000</span>
+                            <span class="unit">FCFA / mois</span>
+                        </div>
+                        <a href="https://wa.me/221XXXXXXXXX?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27appartement%20%C3%A0%20Dakar" target="_blank" rel="noopener" class="btn-wa-sm" aria-label="Contacter via WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Villa Saly -->
+            <article class="property-card reveal" data-location="saly" data-type="villa">
+                <div class="card-img">
+                    <img src="villa.png" alt="Villa prestige à Saly Portudal" loading="lazy">
+                    <span class="card-badge premium">Premium</span>
+                    <div class="card-img-overlay">
+                        <button class="btn-details" data-id="2">Voir les détails</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-loc">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Saly Portudal
+                    </p>
+                    <h3>Villa Prestige</h3>
+                    <p class="card-desc">Splendide villa avec piscine privée, jardin tropical et accès direct à la plage de Saly.</p>
+                    <div class="card-features">
+                        <span>🛏 5 ch.</span>
+                        <span>🚿 4 sdb</span>
+                        <span>📐 350 m²</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">
+                            <span class="price">500 000</span>
+                            <span class="unit">FCFA / semaine</span>
+                        </div>
+                        <a href="https://wa.me/221XXXXXXXXX?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20villa%20%C3%A0%20Saly" target="_blank" rel="noopener" class="btn-wa-sm" aria-label="Contacter via WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Hôtel Saly -->
+            <article class="property-card reveal" data-location="saly" data-type="hotel">
+                <div class="card-img">
+                    <img src="hotel.png" alt="Hôtel boutique à Saly" loading="lazy">
+                    <span class="card-badge on-demand">Sur demande</span>
+                    <div class="card-img-overlay">
+                        <button class="btn-details" data-id="3">Voir les détails</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-loc">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Saly Portudal
+                    </p>
+                    <h3>Hôtel Boutique</h3>
+                    <p class="card-desc">Hôtel de charme en bord de mer avec piscine, restaurant gastronomique et services premium.</p>
+                    <div class="card-features">
+                        <span>🏨 20 suites</span>
+                        <span>🍽 Restaurant</span>
+                        <span>🏊 Piscine</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">
+                            <span class="price on-demand-price">Sur demande</span>
+                        </div>
+                        <a href="https://wa.me/221XXXXXXXXX?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27h%C3%B4tel%20%C3%A0%20Saly" target="_blank" rel="noopener" class="btn-wa-sm" aria-label="Contacter via WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Résidence Saly -->
+            <article class="property-card reveal" data-location="saly" data-type="residence">
+                <div class="card-img">
+                    <img src="resi.png" alt="Résidence de luxe à Saly" loading="lazy">
+                    <span class="card-badge on-demand">Sur demande</span>
+                    <div class="card-img-overlay">
+                        <button class="btn-details" data-id="4">Voir les détails</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-loc">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Saly Portudal
+                    </p>
+                    <h3>Résidence de Luxe</h3>
+                    <p class="card-desc">Résidence sécurisée 24h/24 avec gardiennage, piscine commune et espaces verts luxuriants.</p>
+                    <div class="card-features">
+                        <span>🛏 4 ch.</span>
+                        <span>🔒 Sécurisé</span>
+                        <span>📐 200 m²</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">
+                            <span class="price on-demand-price">Sur demande</span>
+                        </div>
+                        <a href="https://wa.me/221XXXXXXXXX?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20r%C3%A9sidence%20%C3%A0%20Saly" target="_blank" rel="noopener" class="btn-wa-sm" aria-label="Contacter via WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div><!-- /cards-grid -->
+
+        <p class="no-results" id="noResults" style="display:none">
+            Aucun bien ne correspond à votre recherche. <button class="link-btn" id="resetFilter">Tout afficher</button>
+        </p>
+
+    </div>
+</section>
+
+<!-- ===== MODAL DÉTAIL ===== -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
+
+<!-- ===== À PROPOS ===== -->
+<section class="about-section" id="about">
+    <div class="container about-grid">
+        <div class="about-img-wrap reveal">
+            <img src="about.png" alt="Immoplus — Immobilier de prestige au Sénégal">
+            <div class="about-badge">
+                <strong>+10</strong>
+                <span>ans d'expérience</span>
+            </div>
+        </div>
+
+        <div class="about-text reveal">
+            <span class="section-tag">À Propos de Nous</span>
+            <h2>L'Immobilier de Luxe<br>au Sénégal</h2>
+            <p>Immoplus est une agence immobilière de référence, spécialisée dans la location de biens d'exception au Sénégal. Nous proposons une sélection exclusive d'appartements modernes à Dakar ainsi que des villas, hôtels et résidences de prestige à Saly Portudal.</p>
+            <p>Notre mission : vous offrir une expérience immobilière incomparable avec un service personnalisé, transparent et véritablement haut de gamme.</p>
+            <div class="about-values">
+                <div class="value-item">
+                    <div class="value-icon">🏆</div>
+                    <div>
+                        <strong>Excellence</strong>
+                        <p>Des biens soigneusement sélectionnés</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <div>
+                        <strong>Accompagnement</strong>
+                        <p>Un service personnalisé de A à Z</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🔒</div>
+                    <div>
+                        <strong>Fiabilité</strong>
+                        <p>Transactions sécurisées et transparentes</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" class="btn-primary">Nous contacter</a>
         </div>
     </div>
 </section>
 
-<!-- RECHERCHE -->
-<section class="search">
-    <input type="text" placeholder="Localisation (Dakar, Saly...)">
-    <select>
-        <option>Type de bien</option>
-        <option>Appartement</option>
-        <option>Villa</option>
-        <option>Hôtel</option>
-    </select>
-    <button>Rechercher</button>
-</section>
-
-<!-- BIENS -->
-<section class="properties">
-    <h2>Nos Biens</h2>
-
-    <div class="cards">
-
-        <!-- Appartement -->
-        <div class="card">
-            <img src="appart.png" alt="Appartement Dakar">
-            <div class="card-content">
-                <h3>Appartement Luxe - Dakar</h3>
-                <p>250 000 FCFA / mois</p>
-            </div>
+<!-- ===== RÉSERVATION ===== -->
+<section class="reservation-section" id="reservation">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Réservation</span>
+            <h2>Réservez Votre Bien</h2>
+            <p>Remplissez le formulaire — nous vous répondons sous 24h</p>
         </div>
 
-        <!-- Villa -->
-        <div class="card">
-            <img src="villa.png" alt="Villa Saly">
-            <div class="card-content">
-                <h3>Villa - Saly</h3>
-                <p>500 000 FCFA / semaine</p>
-            </div>
+        <div class="form-card reveal" id="resFormCard">
+            <form id="resForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rNom">Nom complet <span class="req">*</span></label>
+                        <input type="text" id="rNom" placeholder="Votre nom complet" required>
+                        <span class="err"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="rEmail">Email <span class="req">*</span></label>
+                        <input type="email" id="rEmail" placeholder="votre@email.com" required>
+                        <span class="err"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rTel">Téléphone <span class="req">*</span></label>
+                        <input type="tel" id="rTel" placeholder="+221 77 XXX XX XX" required>
+                        <span class="err"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="rBien">Type de bien</label>
+                        <select id="rBien">
+                            <option value="">Choisir un bien…</option>
+                            <option value="appart">Appartement — Dakar</option>
+                            <option value="villa">Villa — Saly</option>
+                            <option value="hotel">Hôtel — Saly</option>
+                            <option value="resi">Résidence — Saly</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rArrivee">Date d'arrivée</label>
+                        <input type="date" id="rArrivee">
+                    </div>
+                    <div class="form-group">
+                        <label for="rDepart">Date de départ</label>
+                        <input type="date" id="rDepart">
+                    </div>
+                </div>
+                <div class="form-group full">
+                    <label for="rMsg">Message</label>
+                    <textarea id="rMsg" rows="4" placeholder="Précisez vos besoins, budget, nombre de personnes…"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary btn-lg">
+                        Envoyer la demande
+                    </button>
+                    <a href="https://wa.me/221XXXXXXXXX?text=Bonjour%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation" target="_blank" rel="noopener" class="btn-wa-lg">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Réserver via WhatsApp
+                    </a>
+                </div>
+                <div class="form-success" id="resSuccess">
+                    <div class="success-check">✓</div>
+                    <p>Demande envoyée avec succès ! Nous vous contacterons dans les 24h.</p>
+                </div>
+            </form>
         </div>
-
-        <!-- Hôtel -->
-        <div class="card">
-            <img src="hotel.png" alt="Hotel Saly">
-            <div class="card-content">
-                <h3>Hôtel - Saly</h3>
-                <p>Sur demande</p>
-            </div>
-        </div>
-
-        <!-- Résidence -->
-        <div class="card">
-            <img src="resi.png" alt="Residence Saly">
-            <div class="card-content">
-                <h3>Résidence - Saly</h3>
-                <p>Sur demande</p>
-            </div>
-        </div>
-
     </div>
 </section>
 
-<section class="about">
-    <div class="about-container">
-
-        <div class="about-text">
-            <h2>À propos de nous</h2>
-            <p>
-                Immoplus est une agence immobilière spécialisée dans la location de biens
-                d’exception au Sénégal. Nous proposons des appartements modernes à Dakar
-                ainsi que des villas, hôtels et résidences de luxe à Saly Portudal.
-            </p>
-
-            <p>
-                Notre mission est de vous offrir des biens de qualité avec un service
-                personnalisé, fiable et haut de gamme.
-            </p>
-
-            <a href="#" class="btn-gold">En savoir plus</a>
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Contact</span>
+            <h2>Parlons de Votre Projet</h2>
         </div>
 
-        <div class="about-image">
-            <img src="about.png" alt="Immobilier luxe Sénégal">
-        </div>
+        <div class="contact-grid">
 
+            <!-- Infos + réseaux -->
+            <div class="contact-info reveal">
+                <div class="contact-item">
+                    <div class="c-icon">📍</div>
+                    <div><strong>Adresse</strong><p>Dakar, Sénégal</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="c-icon">📞</div>
+                    <div><strong>Téléphone</strong><p>+221 XX XXX XX XX</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="c-icon">📧</div>
+                    <div><strong>Email</strong><p>contact@immoplus.sn</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="c-icon">🕐</div>
+                    <div><strong>Horaires</strong><p>Lun — Sam : 8h à 19h</p></div>
+                </div>
+                <div class="social-row">
+                    <a href="#" class="soc-btn fb" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="soc-btn ig" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://wa.me/221XXXXXXXXX" target="_blank" rel="noopener" class="soc-btn wa" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="contact-form-wrap reveal">
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="cNom">Nom complet <span class="req">*</span></label>
+                        <input type="text" id="cNom" placeholder="Votre nom" required>
+                        <span class="err"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cEmail">Email <span class="req">*</span></label>
+                        <input type="email" id="cEmail" placeholder="votre@email.com" required>
+                        <span class="err"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cSujet">Sujet</label>
+                        <input type="text" id="cSujet" placeholder="Objet de votre message">
+                    </div>
+                    <div class="form-group">
+                        <label for="cMsg">Message <span class="req">*</span></label>
+                        <textarea id="cMsg" rows="5" placeholder="Votre message…" required></textarea>
+                        <span class="err"></span>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Envoyer le message</button>
+                    <div class="form-success" id="contactSuccess">
+                        <div class="success-check">✓</div>
+                        <p>Message envoyé ! Nous vous répondrons sous 24h.</p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Carte Google Maps -->
+            <div class="map-wrap reveal">
+                <iframe
+                    src="https://maps.google.com/maps?q=Dakar,Senegal&output=embed"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localisation Immoplus — Dakar, Sénégal">
+                </iframe>
+            </div>
+
+        </div>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-    <h2>Contactez-nous</h2>
-    <form>
-        <input type="text" placeholder="Nom">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Votre message"></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Immoplus - Tous droits réservés</p>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="logoo.png" alt="Immoplus">
+            <p>Votre partenaire immobilier de confiance au Sénégal. Des biens d'exception à Dakar et Saly Portudal.</p>
+            <a href="https://wa.me/221XXXXXXXXX" target="_blank" rel="noopener" class="btn-wa-footer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Nous contacter sur WhatsApp
+            </a>
+        </div>
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#biens">Nos Biens</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Nos Biens</h4>
+            <ul>
+                <li><a href="#biens">Appartements — Dakar</a></li>
+                <li><a href="#biens">Villas — Saly</a></li>
+                <li><a href="#biens">Hôtels — Saly</a></li>
+                <li><a href="#biens">Résidences — Saly</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>📍 Dakar, Sénégal</p>
+            <p>📞 +221 XX XXX XX XX</p>
+            <p>📧 contact@immoplus.sn</p>
+            <p>🕐 Lun–Sam : 8h–19h</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Immoplus — Tous droits réservés</p>
+        <p>Immobilier de Prestige au Sénégal</p>
+    </div>
 </footer>
+
+<!-- Bouton WhatsApp flottant -->
+<a href="https://wa.me/221XXXXXXXXX" target="_blank" rel="noopener" class="wa-float" aria-label="Contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
 <script src="script.js"></script>
 </body>
